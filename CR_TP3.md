@@ -110,6 +110,6 @@ sudo apt install oracle-java11-installer
 
 On a eu un probleme lors de l'installation, l'install ne marche, on nous propose à la place oracle-java11-installer-local.
 L'interface se lance mais il y a des erreurs pendant l'éxecution.
-
+Or on peut quand même visualiser avec ls ce qu'il y a à l'intérieur: linuxuprising-ubuntu-java-eoan.list
 
 
