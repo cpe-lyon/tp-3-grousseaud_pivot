@@ -10,10 +10,15 @@ Avec dpkg: se placer dans var/log/=> dpkg -l | grep "^ii" |wc -l
 on selectionne uniquement les paquets commenceant par ii, wc compte, grep agit comme un filtre de recherche,
 la liste des paquets dans dpkg commencence par ii.
 Avec apt: var/log/ apt list --installed | wc -l
-dpkg:543-apt:544, On observe une différence de comptage car wc comp-te le nbr de ligne or apt possède une ligne("en train de lister...").
 *Comment explique-t-on la (petite) différence de comptage ?*
+dpkg:543/apt:544, On observe une différence de comptage car wc comp-te le nbr de ligne or apt possède une ligne("en train de lister...").
 
 *3. Combien de paquets sont disponibles en téléchargement ?*
+1er etape lister tout : var/log/ apt list | wc -l
+61599
+2e etape liste fichiers installés var/log/ apt list --installed | wc -l
+549
+=> diff=61599-549=61050 fichiers dispo en téléchargement.
 
 *4. Créer un alias “maj” qui met à jour le système*
 
