@@ -59,5 +59,24 @@ On écrit un script avec la commande:
 (dpkg -l $1 | grep "^ii") &&  echo "installé" || echo "non installé"
 $1 fait référence à la valeur du premier agrument.
 
+Résultat:
+1)sudo ./status fortunes
+=>ii fortunes   1:1.99.1-7build1 all    Data files containing fortune cookies
+installe
+2)sudo ./status vlc
+dpkg-query: aucun paquet ne correspond a vlc
+non installe
+
+## Exercice 4:
+
+*Lister les programmes livrés avec coreutils. A quoi sert la commande ’[’ et comment afficher ce qu’elle
+retourne ?*
+apt show coreutils
+Cela nous retourne: "Précisement, ce paquet comprend : arch base64 basename.....who whoami yes"
+’[’ permet
+
+
+
+
 
 
